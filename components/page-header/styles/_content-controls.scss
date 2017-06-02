@@ -1,6 +1,10 @@
 @mixin base {
-    display: flex;
-    flex-grow: 0;
+    @include make-row();
+    @include make-col-ready();
+    @include make-col(4);
+
+    // display: flex;
+    // flex-grow: 0;
     justify-content: flex-end;
     padding-bottom: space(1);
     padding-left: space(1);
@@ -14,4 +18,5 @@
 
 &__content-controls {
     @include base;
+
 }
